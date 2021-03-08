@@ -1,20 +1,18 @@
-const assertEqual = require('./assertEqual');
-
-let eqArrays = function (array1, array2) {
-  let accumulator = 0;
-  if (array1.length === array2.length) {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] === array2[i]) {
-        accumulator++;
+const eqArrays = function(arr1, arr2) {
+  // check to see if they inputs are indeed arrays using .isArray because [a, b, c] and string 'abc'
+  // AND that the array lengths are equal
+  if (Array.isArray(arr1) && Array.isArray(arr2) && arr1.length === arr2.length) {
+    for (let i = 0; i < arr1.length; i++) {
+      //if the lengths do not match return false
+      if (arr1[i] !== arr2[i]) {
+        return false;
       }
     }
-  }
-  if (accumulator === array1.length) {
+    // loop will only keep running if all elements match
     return true;
   } else {
-    return false;
+    return false; // because the length is not equal
   }
-}
-
-module.exports = eqArrays;
+};
+ module.exports = eqArrays;
 
