@@ -22,3 +22,5 @@ const grocerys = [
   { item: 'bread', price: 2.50 }
 ]
 assertArraysEqual(map(grocerys, product => product.item), ['milk', 'bread']);
+
+module.exports = map
