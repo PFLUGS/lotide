@@ -1,13 +1,12 @@
-const assertEqual = require('../assertEqual');
-const assertArraysEqual = require('../assertArraysEqual');
-const tail = require('../tail')
+// assertArraysEqual(tail([5, 6, 7]), [6,7]);
+// assertArraysEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+// assertArraysEqual(tail(["Hello", "Lighthouse"]), "Lighthouse");
 
+const assert = require('chai').assert;
+const tail   = require('../tail');
 
-
- const words = ["Yo Yo", "Lighthouse", "Labs"];
- tail(words); // no need to capture the return value since we are not checking it
- assertEqual(words.length, 3);
-
-assertArraysEqual(tail([5, 6, 7]), [6,7]);
-assertArraysEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
-assertArraysEqual(tail(["Hello", "Lighthouse"]), "Lighthouse");
+describe("#tail", () => {
+  it("returns everything except the first index [5, 6, 7], [6,7]", () => {
+    assert.deepEqual(tail([5, 6, 7]), [6,7]);
+  });
+});
