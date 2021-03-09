@@ -1,4 +1,3 @@
-const { builtinModules } = require('node:module');
 const assertEqual = require('./assertEqual');
 
 
@@ -11,12 +10,12 @@ const findKeyByValue = function (object, value) {
   }
 };
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire"
-};
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama: "The Wire"
+// };
 
-module.exports = findKeyByValue
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// module.exports = findKeyByValue
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);

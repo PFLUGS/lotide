@@ -25,10 +25,10 @@ countLetters("lighthouse in the house");
 
 ///test
 
-const string = "hello my name is";
+// const string = "hello my name is";
 
-const result = countLetters(string);
+// const result = countLetters(string);
 
-assertEqual(result["l"], 2);
+// assertEqual(result["l"], 2);
 
-assertEqual(result["1"], undefined);
+// assertEqual(result["1"], undefined);

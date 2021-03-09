@@ -11,16 +11,16 @@ const map = function (array, callback) {
   return results;
 }
 
-const results1 = map(words, word => word[0]);
-console.log(results1);
+// const results1 = map(words, word => word[0]);
+// console.log(results1);
 
 //////  Tests  ///////
-assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't'])
+// assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't'])
 
-const grocerys = [
-  { item: 'milk', price: 3.00 },
-  { item: 'bread', price: 2.50 }
-]
-assertArraysEqual(map(grocerys, product => product.item), ['milk', 'bread']);
+// const grocerys = [
+//   { item: 'milk', price: 3.00 },
+//   { item: 'bread', price: 2.50 }
+// ]
+// assertArraysEqual(map(grocerys, product => product.item), ['milk', 'bread']);
 
 module.exports = map
